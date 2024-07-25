@@ -1,0 +1,21 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for bio in bio_todo%}
+{{bio}}
+<ul>
+      <li><strong>Name</strong>:{{bio.description}}<li>
+      <li><strong>Type</strong>:{{bio.unit}}<li>
+      
+     
+</ul><br/><br/>
+{%endfor%}
+
+
+
+
+
+
+      
+      {%endblock%}

@@ -1,0 +1,58 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+{%load static%}
+<div class="main-wrapper login-body">
+<div class="login-wrapper">
+<div class="container">
+<div class="loginbox">
+<div class="login-left">
+<img class="img-fluid" src="{%static 'myapp/images/cmms.jpg'%}" alt="Logo">
+</div>
+<div class="login-right">
+<div class="login-right-wrap">
+<h1>Company Name</h1>
+<p class="account-subtitle">Need an account? <a href="{%url "register_user"%}">Sign Up</a></p>
+<h2>Sign in</h2>
+
+<form action="{%url 'home'%}" method='POST'>
+{% csrf_token %}
+<div class="form-group">
+<label>Username <span class="login-danger">*</span></label>
+<input class="form-control" type="text">
+<span class="profile-views"><i class="fas fa-user-circle"></i></span>
+</div>
+<div class="form-group">
+<label>Password <span class="login-danger">*</span></label>
+<input class="form-control pass-input" type="text">
+<span class="profile-views feather-eye toggle-password"></span>
+</div>
+<div class="forgotpass">
+<div class="remember-me">
+<label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
+<input type="checkbox" name="radio">
+<span class="checkmark"></span>
+</label>
+</div>
+<p><a href="{%url "reset_password"%}">Forgot Password?</a></p>
+</div>
+<!--<div class="form-group">
+     
+    <button class="btn btn-primary btn-block" type="submit">login</button>
+      
+</div>-->
+<div class="form-group mb-0">
+    <!--<button class="btn btn-primary btn-block" type="submit">Register</button>-->
+        <input type='submit' value='Submit' class=class="btn btn-secondary">
+    </div>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{%endblock%}
+
+

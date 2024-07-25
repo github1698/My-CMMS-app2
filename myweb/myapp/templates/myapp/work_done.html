@@ -1,0 +1,23 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<h1>Work Completed...</h1>
+
+{%for work in work_completed%}
+<div class="card">
+  <div class="card-header">
+    {{work}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Work done:{{work.department}}</h5>
+    <p class="card-text"> 
+      <ul>
+      <li>name:{{work.department}}</li>
+      <li>Unit:{{work.requesting_unit}}</li>
+      <li>Date:{{work.completion_date}}</li>
+      <li>condition:{{work.condition}}</li>
+      <li>Comment:{{work.comment}}</li>
+      
+      {%endfor%}
+      {%endblock%}
+      

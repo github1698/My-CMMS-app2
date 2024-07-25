@@ -1,0 +1,22 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for bio in bio_consumable%}
+<ul>
+      <li><strong>Name</strong>:{{bio.consumable_name}}<li>
+      <li><strong>Type</strong>:{{bio.equipment_type}}<li>
+      <li><strong>Unit</strong>:{{bio.unit}}<li>
+      <li><strong>Quantity</strong>:{{bio.quantity}}<li>
+      <li><strong>Location</strong>:{{bio.location}}<li>
+     
+</ul><br/><br/>
+{%endfor%}
+
+
+
+
+
+
+      
+      {%endblock%}

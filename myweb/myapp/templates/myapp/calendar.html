@@ -1,0 +1,22 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+<h1>Hello{{name}} workorder for {{month}}{{year}}</h1>
+as of {{time}}
+<br/><br/>
+{{cal|safe}}
+
+
+
+<h3>Workorders this month...<h3/>
+{%if workorder_list %}
+{%for workorder in workorder_list%}
+{{workorder}}-{{workorder.date_received}}<br>
+{%endfor%}
+{%else%}
+Sorry! there are no workorder this month
+
+{%endif%}
+copyright (c) {{cureent_year}}
+<br/><br/>
+
+{%endblock%}

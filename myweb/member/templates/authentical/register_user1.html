@@ -1,0 +1,23 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+{%if form.errors%}
+<div class="alert alert-warning
+alert-dismissible face show" role="alert">
+There was an error with your form
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">
+
+{%endif%}
+
+</button>
+
+</div>
+<h1>Register</h1>
+<form action="{%url 'register_user'%}" method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="form-group mb-0">
+        <!--<button class="btn btn-primary btn-block" type="submit">Register</button>-->
+            <input type='submit' value='Submit' class=class="btn btn-secondary">
+        </div>
+</form>
+{%endblock%}

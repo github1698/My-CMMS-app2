@@ -1,0 +1,63 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+<div class="card">
+    <div class="card-header">
+        {%if searched%}
+        You searched for {{searched}}
+        {%for vendo in vendors%}
+        {{vendor}}
+        {%endfor%}
+        {%else%}
+        <h1>Hey! you have not searched for anything</h1>
+        
+        {%endif%}
+        
+    </div>
+    
+    
+    
+ <div class="card-footer text-muted">
+    <form action="{%url 'search-vendor'%}" method='POST'>
+    {% csrf_token %}
+    <input class="form-control me-2" type="search" placeholder="Search vendor" aria-label="Search" name="searched"><br/>
+    <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+  </div>
+  
+ 
+  {%for vendor in vendors%}
+  <div>
+          <h5 class="card-title">Supplier:{{vendor.name}}</h5>
+          <p class="card-text"> 
+            <ul>
+            <li>Address:{{vendor.address}}</li>
+            <li>Zip Code:{{vendor.zip_code}}</li>
+            <li>Description:{{vendor.phone}}</li>
+            <li>Web Address:{{vendor.web}}</li>
+            <li>Email:{{vendor.email_address}}</li>
+            
+           
+            
+            
+            </ul>
+        </p>
+          
+  </div>
+        {%if user.is_authenticated%}
+       
+        
+    <div class="card-footer text-muted">
+      <a href="{%url 'update-vendor' vendor.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Vendor</a>
+    
+      
+      <a href="{%url 'delete-vendor' vendor.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Vendor</a>
+    </div>
+      
+      {%endif%}
+</div>
+{%endfor%}
+    
+{%endblock%}
+   

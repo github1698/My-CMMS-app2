@@ -1,0 +1,52 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<h1>Assets....</h1>
+
+<table class="table">
+
+
+    <thead>
+      <tr>
+       
+        <th scope="col">asset.asset_name</th>
+        <th scope="col">asset.supply_date</th>
+        <th scope="col">asset.model</th>
+        <th scope="col">asset.quantity</th>
+        <th scope="col">asset.asset_department ----asset.quantity</th>
+        <th scope="col">asset.present_condition</th>
+        <th scope="col">asset.comment</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+        {%for asset in assets%}
+       
+      <tr>
+        
+     
+        <td>{{asset.asset_name}}</td>
+        <td>{{asset.supply_date}}</td>
+        <td>{{asset.model}}</td>
+        <td>{{asset.quantity}}</td>
+        <td>{{asset.asset_department}}</td>
+        <td>{{asset.present_condition}}</td>
+        <td>{{asset.comment}}</td><br/><br/>
+        <td align='right'>
+            <a href="{%url 'update-asset' asset.id%}"
+                class="btn btn-outline-secondary btn-sm">Update</a>
+        
+             <a href="{%url 'delete-asset' asset.id%}"
+              class="btn btn-outline-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+      <br/><br/>
+      
+  </table>
+ 
+
+
+{%endfor%}
+    
+<br/>
+{%endblock%}

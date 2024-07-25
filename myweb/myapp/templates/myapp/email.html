@@ -1,0 +1,12 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+<center><h1>Sending email to address</h1></center>
+<i><center><h4>Contact Client</h4></center></i>
+<form method="POST" action={%url 'email-add'%}>
+    {% csrf_token %}
+    <center><input type="text" name="name" placeholder="Title of email" required></center><br>
+    <center><input type="email" name="email" placeholder="The company email address" required></center><br>
+        <center><i><textarea name="meassage" placeholder="meassage to be delivered" required id=""></textarea></i></center><br>
+            <center><button class="btn btn-primary mt-2" type="submit">Send</button>
+    </form>
+{%endblock%}

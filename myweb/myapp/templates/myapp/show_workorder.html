@@ -1,0 +1,50 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<div class="card">
+      <div class="card-header">
+            <h1>{{workorder}}</h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+            
+                  <strong>Requesting Unit</strong>:{{workorder.Requesting_unit}}<br/>
+                  <strong>Department</strong>:{{workorder.department}}<br/>
+                  <strong>Department Taken To</strong>:{{workorder.receiving_unit}}<br/>
+                  <strong>Date Recieved</strong>:{{workorder.date_received}}<br/>
+                  <strong>Completion Date</strong>:{{workorder.completion_date}}<br/>
+                  <strong>Equipment Type</strong>:{{workorder.equipment}}<br/>
+                  <strong>Items Replaced</strong>:{{workorder.item_used}}<br/>
+                   <strong>Supervising Officer</strong>:{{workorder.manager}}<br/>
+                   <strong>Condition after Repair</strong>:{{workorder.completed}}<br/>
+                   <br/><strong>Attendees</strong><br/>
+            {%for user in workorder.attendees.all%}
+            {{user}}
+                  {%endfor%}
+                  
+                             
+           
+        </p>
+        <a href="{%url 'all-workorder'%}" class="btn btn-primary">Workorder</a>
+      </div>
+    </div>
+
+
+
+
+<div class="card-footer text-muted">
+      <a href="{%url 'update-workorder' workorder.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Workorder</a>
+    
+      
+      <a href="{%url 'delete-workorder' workorder.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Workorder</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

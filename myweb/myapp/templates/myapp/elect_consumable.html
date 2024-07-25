@@ -1,0 +1,22 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for elect in elect_consumable%}
+<ul>
+      <li><strong>Name</strong>:{{elect.consumable_name}}<li>
+      <li><strong>Type</strong>:{{elect.equipment_type}}<li>
+      <li><strong>Unit</strong>:{{elect.unit}}<li>
+      <li><strong>Quantity</strong>:{{elect.quantity}}<li>
+      <li><strong>Location</strong>:{{elect.location}}<li>
+     
+</ul><br/><br/>
+{%endfor%}
+
+
+
+
+
+
+      
+      {%endblock%}

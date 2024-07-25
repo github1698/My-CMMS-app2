@@ -1,0 +1,54 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for elect in elect_todo%}
+{{elect}}
+{%if power_todo%}
+{%for power in power_todo%}
+<ul>
+      <li><strong>Name</strong>:{{power.name}}<li>
+      <li><strong>Type</strong>:{{power.activities}}<li>
+      <li><strong>Type</strong>:{{power.date}}<li>
+      <li><strong>Type</strong>:{{power.sub_unit}}<li>
+       <li><strong>Type</strong>:{{power.text}}<li>
+       <li><strong>Type</strong>:{{power.complete}}<li>
+      
+     
+</ul>
+{%endfor%}<br/>
+{%endif%}
+{%if lv_todo%}
+{%for lv in lv_todo%}
+<ul>
+    <li><strong>Name</strong>:{{lv.name}}<li>
+        <li><strong>Type</strong>:{{lv.activities}}<li>
+        <li><strong>Type</strong>:{{lv.date}}<li>
+        <li><strong>Type</strong>:{{lv.sub_unit}}<li>
+         <li><strong>Type</strong>:{{lv.text}}<li>
+         <li><strong>Type</strong>:{{lv.complete}}<li>
+        
+     
+</ul><br/><br/>
+{%endfor%}
+{%endif%}
+{%if intwire_todo%}
+{%for intwire in intwire_todo%}
+<ul>
+    <li><strong>Name</strong>:{{intwire.name}}<li>
+        <li><strong>Type</strong>:{{intwire.activities}}<li>
+        <li><strong>Type</strong>:{{intwire.date}}<li>
+        <li><strong>Type</strong>:{{intwire.sub_unit}}<li>
+         <li><strong>Type</strong>:{{intwire.text}}<li>
+         <li><strong>Type</strong>:{{intwire.complete}}<li>
+        
+     
+     
+</ul><br/><br/>
+{%endfor%}
+{%endif%}
+{%endfor%}
+
+{%endblock%}
+
+

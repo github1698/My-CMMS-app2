@@ -1,0 +1,14 @@
+{%extends 'myapp/base.html'%}
+{%block content%}
+
+<h1>Update Vendor...</h1>
+{{vendor}}
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Update" class="btn btn-secondary btn-small">
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+
+
+</form>
+{%endblock%}

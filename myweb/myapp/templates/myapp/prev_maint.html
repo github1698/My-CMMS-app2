@@ -1,0 +1,41 @@
+{%extends 'myapp/base.html'%}
+{%load static%}
+{%block content%}
+
+<h1>Equipment...</h1>
+{%for equipment in equipments %}
+{{equipment}}
+<strong>Requesting Name</strong>:{{equipment.name}}<br/>
+<strong>Requesting Name</strong>:{{equipment.model}}<br/>
+<strong>Requesting Name</strong>:{{equipment.location}}<br/>
+<strong>Requesting Name</strong>:{{equipment.activities}}<br/>
+<strong>Requesting Name</strong>:{{equipment.last_service}}<br/>
+<strong>Requesting Name</strong>:{{equipment.next_service}}<br/>
+<strong>Requesting Name</strong>:{{equipment.cost}}<br/>
+<strong>Requesting Name</strong>:{{equipment.is_complete}}<br/>
+<br/><strong>Attendees</strong><br/>
+            {%for user in equipment.attendees.all%}
+            {{user}}
+                  {%endfor%}
+</ul>
+<div class="card-footer text-muted">
+      <a href="{%url 'update-equipment' equipment.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Equipment</a>
+    
+      
+      <a href="{%url 'delete-equipment' equipment.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Equipment</a>
+    </div>
+
+
+{%endfor%}
+{%endblock%}
+name=models.CharField(max_length=50, default="anything")
+    model=models.CharField(max_length=50, default="anything", null=True, blank=True)
+    location=models.CharField(max_length=70, default="anything",null=True, blank=True)
+    activities=models.ForeignKey("Activities", blank=True, null=True, on_delete=models.SET_NULL)
+    last_service=models.DateTimeField(blank=True, null=True)
+    next_service=models.DateTimeField(blank=True, null=True)
+    cost=models.FloatField(blank=True, null=True)
+    is_complete=models.BooleanField(default=False)
+    attendees=models.ForeignKey("MaintOfficers", blank=True, null=True, on_delete=models.SET_NULL)

@@ -1,0 +1,23 @@
+{%extends 'myapp/base.html'%}
+
+{%block content%}
+
+{%if user.is_authenticated%}
+<h1>Add Asset...</h1>
+{%if submitted%}
+Your Asset was submitted successfully!!
+{%else%}
+
+<form action="" method='POST' class="card p-3 mt-5" autocomplete="off">
+    <div class="form-group">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="submit" value="Submit" >
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+</div>
+</form>
+
+
+{%endif%}
+{%endif%}
+{%endblock%}

@@ -1,0 +1,25 @@
+{%extends 'myapp/base.html'%}
+{%block content%}
+{%if user.is_authenticated %}
+
+<h1>Update Requests...</h1>
+
+{{update_request}}
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Update" class="btn btn-secondary btn-small">
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+</form>
+logged in: {{user}}
+<br/>
+Request Manager: {{update_request.manager}}
+<br/><br/>
+{%endif%}
+
+<h1>Access denied</h1>
+<p>Only admin manager is allowed access into this page, thank you</p>
+
+
+{%endblock%}

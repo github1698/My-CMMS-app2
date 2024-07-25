@@ -1,0 +1,36 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+<h1>Consumable</h1>
+
+<ul>
+      <li>Consumable Name:<strong>{{consumable.item_name}}</strong><li>
+      <li>Equipment Type:<strong>{{consumable.quantity}}</strong><li>
+      <li>Receiving Unut:<strong>{{consumable.issued_quantity}}</strong><li>
+      <li>Quantity:<strong>{{consumable.received_by}}</strong><li>
+      <li>Location:<strong>{{consumable.issued_by}}</strong><li>
+      <li>Comment:<strong>{{consumable.issued_to}}</strong><li>
+      <li>Department:<strong>{{consumable.Balance}}</strong><li>
+      <li>Items Used:<strong>{{consumable.phone_number}}</strong><li>
+      <li><strong>Items Available</strong>:<strong>{{consumable.Reorder}}</strong><li>
+       <li>Reorder Date:<strong>{{consumable.last_updated}}</strong><li>
+       
+      
+</ul>
+
+<div class="card-footer text-muted">
+      <a href="{%url 'update-consumable' consumable.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Consumable</a>
+    
+      
+      <a href="{%url 'delete-consumable' consumable.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Consumable</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

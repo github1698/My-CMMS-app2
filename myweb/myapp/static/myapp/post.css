@@ -1,0 +1,41 @@
+.post {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    padding: 1rem;
+}
+.post a:hover 
+.post a:active {
+    transform: scale(1.1);
+    background-color: #390281;
+    color: #e01223;
+}
+.post img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 12px;
+    transform: rotateZ(5deg);
+    border: 5px solid white;
+    margin-bottom: 1rem;
+}
+.post p {
+    margin-left: 10rem;
+}
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}

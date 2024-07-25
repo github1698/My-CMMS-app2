@@ -1,0 +1,27 @@
+{%extends 'myapp/base.html'%}
+
+{%block content%}
+request.user:{{user}}
+request.manager:{{requisition.manager}}
+
+
+
+<h1>Add Request...</h1>
+{%if submitted%}
+Your Request was submitted successfully!!
+{%else%}
+
+<form action="" method='POST' class="card p-3 mt-5" autocomplete="off" enctype="multipart/form-data">
+    <div class="form-group">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="submit" value="Submit" >
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+</div>
+</form>
+
+{%endif%}
+<br><br>
+
+
+{%endblock%}

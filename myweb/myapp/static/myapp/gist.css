@@ -1,0 +1,35 @@
+#welcome {
+    background: linear-gradient(to right top, hsl(266, 96%, 44%), #2610e9);
+    padding: 0;
+    
+}
+
+
+#welcome img {
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+    
+}
+#welcome .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    height: 100%;
+}
+
+
+#welcome.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.start {
+    background-color: bisque;
+    text-align: center;
+    margin-top: 0;
+    color: rgb(168, 95, 95);
+
+}
+   

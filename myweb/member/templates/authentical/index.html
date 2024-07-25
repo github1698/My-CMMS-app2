@@ -1,0 +1,40 @@
+{% extends "myapp/base.html" %}
+
+
+{%load static%}
+
+{%block title%}
+cmms Page
+{%endblock%}
+
+{%block css_files%}
+<link rel="stylesheet" href="{%static "myapp/post.css"%}">
+<link rel="stylesheet" href="{%static "myapp/post2.css"%}">
+{%endblock%}
+
+{%block content%}
+<section id="welcome to CMMS App">
+    <header>
+        <img src="{%static "myapp/images/Titus pp 001.jpg "%}" alt="Titus the author of this blog"> 
+        <h2>ILUPEJU APP</h2>
+    </header>
+    <P>Hello! this is an app that is to address computerized maintenance management system</P>
+</section>
+
+
+<section id="about">
+    <h2>What this app is all about</h2>
+    <P>This is proven to have tremendously help maintenance acitivites as well as improve on the data management and analysis</P>
+    <P>The app will help in monitoring, accessing and ensuring proper maintenance activities. This include:
+        <ul>
+            <li>records of vendors<li>
+                <li>Total supplies with records within the specified period </li>
+                <li>Task schedules and workorder done</li>
+        </ul>
+    </P>
+</section>
+
+
+{%endblock%}
+
+

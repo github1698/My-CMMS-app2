@@ -1,0 +1,34 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+<h1>{{vendor}}</h1>
+
+<ul>
+      <li><strong>Name</strong>:{{vendor.name}}<li>
+      <li><strong>Address</strong>:{{vendor.address}}<li>
+      <li><strong>Zip code</strong>:{{vendor.zip_code}}<li>
+      <li><strong>Phone</strong>:{{vendor.phone}}<li>
+      <li><strong>Website</strong>:{{vendor.web}}<li>
+      <li><strong>Email Address</strong>:{{vendor.email_address}}<li>
+       <li><strong>The Supervising Officer</strong>:{{vendor.manager}}<li>
+      <br/><strong>Attendees</strong><br/>
+            {%for user in vendor.attendees.all%}
+            {{user}}
+                  {%endfor%}
+</ul>
+<div class="card-footer text-muted">
+      <a href="{%url 'update-vendor' vendor.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Vendor</a>
+    
+      
+      <a href="{%url 'delete-vendor' vendor.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Vendor</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

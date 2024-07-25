@@ -1,0 +1,62 @@
+* {
+    font-family: 'Poppins',sans-serif;
+}
+.wrapper {
+    background: #ececec;
+    padding: 0 40px 0 40px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+
+}
+
+.side-image {
+    background-image: url("myapp/images/cmms.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+    
+}
+img {
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+.text p {
+    color: #a91b1b;
+    font-size: 18px;
+    padding: 0;
+
+}
+i {
+   font-weight: 400;
+   font-size: 18px; 
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input-box {
+    width: 330px;
+    box-sizing: border-box;

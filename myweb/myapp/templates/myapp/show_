@@ -1,0 +1,32 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+<h1>{{asset}}</h1>
+
+<ul>
+    
+      <li><strong>Requesting Unit</strong>:{{asset.asset_name}}<li>
+      <li><strong>Department</strong>:{{asset.supply_date}}<li>
+      <li><strong>Receiving Unut</strong>:{{asset.quantity}}<li>
+      <li><strong>Date Received</strong>:{{asset.location}}<li>
+      <li><strong>Date Completed</strong>:{{asset.present_condition}}<li>
+      <li><strong>The Equipent</strong>:{{asset.comment}}<li>
+       <li><strong>The Supervising Officer</strong>:{{asset.asset_name}}<li>
+      
+</ul>
+<div class="card-footer text-muted">
+      <a href="{%url 'update-workorder' workorder.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Workorder</a>
+    
+      
+      <a href="{%url 'delete-workorder' workorder.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Workorder</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

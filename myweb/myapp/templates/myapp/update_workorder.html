@@ -1,0 +1,21 @@
+{%extends 'myapp/base.html'%}
+{%block content%}
+
+<h1>Update Workorder...</h1>
+logged in user:{{user}}
+<br><br>
+workorder manager:{{workorder.manager}}
+{{update_workorder}}
+<div class="form-group">
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    
+      
+      
+    <input type="submit" value="Update" class="btn btn-secondary btn-small">
+    
+    
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</div>
+  {%endblock%}

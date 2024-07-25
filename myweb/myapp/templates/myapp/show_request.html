@@ -1,0 +1,50 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<div class="card">
+      <div class="card-header">
+            <h1>{{requisition}}</h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+            
+                  <strong>Requesting Name</strong>:{{requisition.emanating_dept}}<br/>
+                  <strong>Date</strong>:{{requisition.requesting_officer}}<br/>
+                  
+                  <strong>Section</strong>:{{requisition.hod_consent}}<br/>
+                  <strong>Section</strong>:{{requisition.equipment}}<br/>
+                  <strong>Activity</strong>:{{requisition.action_by}}<br/>
+                  <strong>Status</strong>:{{requisition.section}}<br/>
+                  {%if request.user==request.manager%}
+                  <strong>Details</strong>:{{requisition.manager}}<br/>
+                   <strong>Section</strong>:{{requisition.date_submitted}}<br/>
+                   <strong>Section</strong>:{{requisition.date_received}}<br/>
+                   <strong>Sub_unit</strong>:{{requisition.is_complete}}<br/>
+                  
+                  
+                             
+           
+        </p>
+        <a href="{%url 'all-requests'%}" class="btn btn-primary">Requests</a>
+      </div>
+    </div>
+
+
+
+
+<div class="card-footer text-muted">
+      <a href="{%url 'update-request' requisition.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Request</a>
+    
+      
+      <a href="{%url 'delete-request' requisition.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Request</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

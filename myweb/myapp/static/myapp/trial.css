@@ -1,0 +1,199 @@
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+    --color-green: #13bd54;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    background-image: url("myapp/images/sky.jpg");
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    top: 0;
+    position: absolute;
+    padding: 0;
+    
+
+        
+ }
+ 
+ .menu-log {    
+   
+    align-items: flex-start;
+    background-color: var(--color-primary);
+    height: 20px;
+    width: 100%;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: 5px;
+   
+    
+
+    
+ 
+}   
+.menu-log h3{    
+    
+    
+    color: var(--color-white)
+    
+ 
+}   
+     
+ 
+ 
+
+
+
+.menu-bar {    
+    background-color: var(--color-green);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: 10px;
+    
+    
+ 
+}
+.logo {
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  
+}
+
+
+.menu-bar ul li {
+    padding: 10px 10px;
+    position: relative;
+    width: fit-content;
+    margin-left: 10px;
+    
+}
+.menu-bar ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+.menu-bar ul li a:hover {
+    color: var(--color-primary);
+}
+.dropdown-menu {
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu  {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    background-color: var(--color-green);
+ }
+ .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+    padding: 0;
+    
+ }
+ .dropdown-menu ul li {
+   width: 180px;
+   padding: 10px;
+}
+
+.dropdown-menu li a {
+    padding: .5em 1em;
+    color: gray;
+}
+
+.dropdown-menu li:first-child a {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 2px;
+    color: var(--color-white);
+}
+
+.fas {
+    float: right;
+    margin-left: 15px;
+    padding-top: 3rem;
+    
+}
+.hero {
+    height: calc(100vh);
+    background-image: url('../myapp/images/hosp7.jpg');
+    background-position: centre;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    animation: change 10s infinite ease-in-out;
+}
+    
+
+
+.card-text {
+    font-size: 20px;
+    top: 35%;
+    left: 25%;
+    margin-top: 10px;
+    color: var(--color-primary);
+}
+@keyframes change {
+    0%
+    {
+        background-image: url('../myapp/images/hosp1.jpg');
+    }
+    20%
+    {
+        background-image: url('../myapp/images/hosp2.jpg');
+    }
+    40%
+    {
+        background-image: url('../myapp/images/hosp1.jpg');
+    }
+    60%
+    
+    {
+        background-image: url('../myapp/images/hosp3.jpg');
+    }
+    80%
+    {
+        background-image: url('../myapp/images/hosp5.jpg');
+    }
+    100%
+    {
+        background-image: url('../myapp/images/hosp6.jpg');
+    }
+}
+
+    
+
+
+

@@ -1,0 +1,29 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<h1>There is a workorder for {{equipment.name}} for {{year}}{{month}}</h1>
+<br/><br/>
+As at {{time}}
+{{cal|safe}}
+<br/><br/>
+{{month_number}}
+<h3>Workorder this month....<h3>
+    
+{{workorder1}}
+<div class="card">
+  <div class="card-header">
+    {{workorder1}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Equipment:{{equipment.name}}</h5>
+    <p class="card-text"> 
+      <ul>
+      <li>name:{{equipment.name}}</li>
+      <li>model:{{equipment.model}}</li>
+      <li>location:{{equipment.location}}</li>
+      <li>condition:{{equipment.condition}}</li>
+      <li>Description:{{equipment.description}}</li>
+      
+      {%endfor%}
+      {%endblock%}
+      

@@ -1,0 +1,57 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for mech in mech_todo%}
+{{mech}}
+{%if ac_todo%}
+{%for ac in ac_todo%}
+<ul>
+      <li><strong>Name</strong>:{{ac.name}}<li>
+      <li><strong>Activities</strong>:{{ac.activities}}<li>
+      <li><strong>Type</strong>:{{ac.date}}<li>
+      <li><strong>Type</strong>:{{ac.sub_unit}}<li>
+       <li><strong>Type</strong>:{{ac.text}}<li>
+       <li><strong>Type</strong>:{{ac.complete}}<li>
+      
+     
+</ul>
+{%endfor%}<br/>
+{%endif%}
+{%if plumb_todo%}
+{%for plumb in plumb_todo%}
+<ul>
+      <li><strong>Name</strong>:{{plumb.name}}<li>
+      <li><strong>Type</strong>:{{plumb.activities}}<li>
+            <li><strong>Type</strong>:{{plumb.date}}<li>
+                  <li><strong>Type</strong>:{{plumb.sub_unit}}<li>
+                   <li><strong>Type</strong>:{{plumb.text}}<li>
+                   <li><strong>Type</strong>:{{plumb.complete}}<li>
+      
+     
+</ul><br/><br/>
+{%endfor%}
+{%endif%}
+{%if gen_todo%}
+{%for gen in gen_todo%}
+<ul>
+      <li><strong>Name</strong>:{{gen.name}}<li>
+            <li><strong>Type</strong>:{{gen.activities}}<li>
+                  <li><strong>Type</strong>:{{gen.date}}<li>
+                        <li><strong>Type</strong>:{{gen.sub_unit}}<li>
+                         <li><strong>Type</strong>:{{gen.text}}<li>
+                         <li><strong>Type</strong>:{{gen.complete}}<li>
+            
+     
+</ul><br/><br/>
+{%endfor%}
+{%endif%}
+{%endfor%}
+
+{%endblock%}
+
+
+
+
+      
+      

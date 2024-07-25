@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css2">
+    {%load static%}
+    <link rel="stylesheet" href="{%static "myapp/post.css"%}">
+<link rel="stylesheet" href="{%static "myapp/post2.css"%}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900&display=swap');
+    
+</head>
+
+   
+    <body>
+    <section id="welcome">
+    <header>
+        <img src="{%static "myapp/images/cmms2.jpg "%}" alt="Titus the author of this blog"> 
+        <h2>COMPUTERIZED MANITENANCE MANAGEMENT SYSTEM APP</h2>
+    </header>
+    <P>Hello! this is an app that is to address computerized maintenance management system</P>
+</section>
+
+
+<div class="grid-container">
+    <div style="">
+    <h3>What this app is all about</h3>
+    
+    <P>This is proven to have tremendously help maintenance acitivites as well as improve on the data management and analysis</P>
+    <P>The app will help in monitoring, accessing and ensuring proper maintenance activities. This include:
+        <ul>
+                <li>records of vendors</li>
+                <li>Total supplies with records within the specified period </li>
+                <li>Task schedules and workorder done</li>
+        </ul>
+    </P>
+</div class="division">
+<div style="">
+    <P>data anaylysis can b determined with the use of data analysis tools</P>
+    <P>Data for anaylysis can be obtained from document which include:
+        <ul>
+            <li>records of workorder</li>
+                <li>Details of records in csv, pdf or text</li>
+                <li>Predictions can be obtained after analysis</li>
+        </ul>
+    </P>
+</div class="division">
+<div style="">
+    <P>list of assets and Consumables</P>
+    <P>The will help in keeping adequate records of the company asset and list of consumables. This include:
+        <ul>
+            <li>records of company assetss</li>
+                <li>Total list of assets showing years of purchase, models and present location</li>
+                <li>Record of consumables both used and balance</li>
+        </ul>
+    </P>
+</div>
+</div>
+<section id="">
+<div class="close">
+<h3>If you wish to explore the content</h3>
+
+
+    <ul>
+      
+       
+                                   
+        Don't have an account?<button type="button"><a class="btn btn-secondary" href="{%url 'register_user' %}">Register User</a></button><br><br>
+        alrady have an account?<button type="button"><a class="btn btn-success" href="{%url 'signin' %}">Login</a></button>
+        
+      </ul>
+    
+
+</div>
+</section>
+
+
+</body>
+</html>
+
+

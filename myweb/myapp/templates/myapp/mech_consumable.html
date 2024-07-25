@@ -1,0 +1,29 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+
+{%for mech in mech_consumable%}
+<div class="card-body">
+      <h5 class="card-title">In_house_contractors:{{mech}}</h5>
+      <p class="card-text"> 
+
+<ul>
+      <li><strong>Name</strong>:{{mech.consumable_name}}<li>
+      <li><strong>Type</strong>:{{mech.equipment_type}}<li>
+      <li><strong>Unit</strong>:{{mech.unit}}<li>
+      <li><strong>Quantity</strong>:{{mech.quantity}}<li>
+      <li><strong>Location</strong>:{{mech.location}}<li>
+     
+</ul><br/><br/>
+</p>
+    
+</div>
+{%endfor%}
+
+
+
+
+
+
+      
+      {%endblock%}

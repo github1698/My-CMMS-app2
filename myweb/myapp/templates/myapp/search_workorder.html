@@ -1,0 +1,63 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+<div class="card">
+    <div class="card-header">
+        {%if searched%}
+        You searched for {{searched}}
+        {%for workorder in workorders%}
+        {{workorder}}
+        {%endfor%}
+        {%else%}
+        <h1>Hey! you have not searched for anything</h1>
+        
+        {%endif%}
+        
+    </div>
+    
+    
+    
+ <div class="card-footer text-muted">
+    <form action="{%url 'search-workorder'%}" method='POST'>
+    {% csrf_token %}
+    <input class="form-control me-2" type="search" placeholder="Search workorder" aria-label="Search" name="searched"><br/>
+    <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+  </div>
+  
+
+  {%for workorder in workorders%}
+  <div>
+          <h5 class="card-title">Unit:{{workorder.requesting_unit}}</h5>
+          <p class="card-text"> 
+            <ul>
+            <li>Date:{{workorder.department}}</li>
+            <li>Date received:{{workorder.date_received}}</li>
+            <li>Description:{{workorder.equipment}}</li>
+            <br>Attendees:</br/>
+            {%for user in workorder.attendees.all%}
+            {{user}}
+            {%endfor%}
+            
+            
+            </ul>
+        </p>
+          
+  </div>
+        {%if user.is_authenticated%}
+       
+        
+    <div class="card-footer text-muted">
+      <a href="{%url 'update-workorder' workorder.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Workorder</a>
+    
+      
+      <a href="{%url 'delete-workorder' workorder.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Workorder</a>
+    </div>
+      
+      {%endif%}
+</div>
+{%endfor%}
+    
+{%endblock%}
+   

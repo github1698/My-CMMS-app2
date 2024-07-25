@@ -1,0 +1,46 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<h1>Vendors....</h1>
+
+{%for vendor in vendors%}
+<div class="card">
+  <div class="card-header">
+    {{vendor}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">In_house_contractors:{{vendor}}</h5>
+    <p class="card-text"> 
+      <ul>
+      <li>Name:{{vendor.name}}</li>
+      <li><Address></Address>:{{vendor.address}}</li>
+      <li>Zip Code:{{vendor.zip_code}}</li>
+      <li>Phone:{{vendor.phone}}</li>
+      <li>Website:{{vendor.web}}</li>
+      <li>Email:{{vendor.email}}</li>
+     
+      
+      
+      </ul>
+   </p>
+    
+  </div>
+
+  
+  <div class="card-footer text-muted">
+    <a href="{%url 'update-vendor' vendor.id%}">
+   <button type='update 'class="btn btn-outline-secondary btn-sm">Update</button></a>
+   <a href="{%url 'delete-vendor' vendor.id%}">
+    <button type='update 'class="btn btn-outline-danger btn-sm">Delete</button></a>
+ 
+  </div>
+
+   
+
+</div>
+
+{%endfor%}
+
+<br/><br/>
+{%endblock%}
+

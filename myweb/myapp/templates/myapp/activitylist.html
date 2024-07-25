@@ -1,0 +1,29 @@
+{%extends "myapp/base.html"%}
+
+{%block content%}
+
+<h1>{{ls.name}}</h1>
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    <ul>
+        {% for item in ls.item.activities.all %}
+        {%if item.complete == 'True'%}
+        <li>
+            <input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}
+        </li>
+        {%else%}
+        <li>
+            <input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}
+        </li>
+        {%endif%}
+        {%endfor%}
+    </ul>
+    <button type="submit", name="save", value="save">Save</button>
+    <input type="text" name="new" >
+    <button type="submit" name="newItem", value="newItem">newItem</button>
+
+
+</form>
+
+{%endblock%}

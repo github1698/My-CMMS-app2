@@ -1,0 +1,50 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+
+<div class="card">
+      <div class="card-header">
+            <h1>{{equipment}}</h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+            
+                  <strong>Equipment name</strong>:{{equipment.name}}<br/>
+                  <strong>Equipment model</strong>:{{equipment.model}}<br/>
+                  <strong>Equipment location</strong>:{{equipment.location}}<br/>
+                  <strong>Activities Required</strong>:{{equipment.activities}}<br/>
+                  <strong>Last service</strong>:{{equipment.last_service}}<br/>
+                  <strong>Next service</strong>:{{equipment.next_service}}<br/>
+                  <strong>Cost Implication</strong>:{{equipment.cost}}<br/>
+                   <strong>Status</strong>:{{equipment.is_complete}}<br/>
+                   
+                   <br/><strong>Attendees</strong><br/>
+            {%for user in equipment.attendees.all%}
+            {{user}}
+                  {%endfor%}
+                  
+                             
+           
+        </p>
+        <a href="{%url 'all-equipments'%}" class="btn btn-primary">Equip</a>
+      </div>
+    </div>
+
+
+
+
+<div class="card-footer text-muted">
+      <a href="{%url 'update-equipment' equipment.id%}"
+                  class="btn btn-outline-secondary btn-sm">Update Equipment</a>
+    
+      
+      <a href="{%url 'delete-equipment' equipment.id%}"
+      class="btn btn-outline-danger btn-sm">Delete Equipment</a>
+    </div>
+
+
+
+
+
+      
+      {%endblock%}

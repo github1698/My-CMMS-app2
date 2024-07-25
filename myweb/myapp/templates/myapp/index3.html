@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="imgBx">
+          <img src="{%static 'myapp/images/cmms.jpg'%}">
+        </div>
+        <div class="contentBx">
+            <div class="formBx"></div>
+            <h2>Login</h2>
+            <form action="">
+                <div class="inputBx">
+                    <span>Username</span>
+                    <input type="text" name="">
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="text" name="">
+                        <div class="remember">
+                    <label><input type="checkbox" name="">Remember me</label>
+                        </div>
+                        <div class="inputBx">
+                            <input type="submit" value="Sign in" name="">
+                            <div class="inputBx">
+                               <!--<p>Don't have an account?<a href="#">Sign Up</a></p>-->
+                               <p>Don't have an account?<a class="small text-muted" href="{%url "register-user"%}">Sign Up</a></div>
+                                <p>Don't have an account?<a class="small text-muted" href="#"></a>
+                                </form>   
+            </form>   
+        </div>
+    </section>
+</body>
+</html>

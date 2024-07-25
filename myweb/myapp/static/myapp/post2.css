@@ -1,0 +1,91 @@
+#welcome {
+    background: linear-gradient(to right top, hsl(166, 66%, 24%), #d3d2dd);
+    padding: 1rem;
+}
+#welcome header {
+    display: flex;
+    align-items: flex-start;
+}
+
+#welcome img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid white;
+    border-radius: 12px;
+    background-color: rgb(20,33,209);
+    transform: rotateZ(-5deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+
+}
+#welcome h2 {
+    font-size: 3.5rem;
+    margin: 0 0 0 2rem;
+    color: #0b0a0a;
+    width: 15em;
+}
+
+#welcome p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#latest-post {
+    background-color: rgb(216,107,112);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100rem;
+    margin: -3rem;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.25);
+}
+#latest-post{
+    text-align: center;
+}
+#latest-post ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+#latest-post {
+    flex: 1;
+}
+#about {
+    background-color: aqua;
+    font-size: 1.5rem;
+    color: #0b0c0c;
+}
+#about h3 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+.division {
+    background-color: aqua;
+}
+
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 33.4% 33.4% 33.4%;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: seagreen;
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+    
+
+ #conclusion {
+    background: linear-gradient(to right top, hsl(166, 66%, 24%), #b6b4c4);
+    padding: 2rem;
+ } 
+
+
+#about p {
+    font-size: 1.5rem;
+    color: #040605;
+    
+}
